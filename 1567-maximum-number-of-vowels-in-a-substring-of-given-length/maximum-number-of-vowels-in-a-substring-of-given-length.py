@@ -15,13 +15,8 @@ class Solution:
             left = s[i - 1] in vowels
             right = s[i + k - 1] in vowels
 
-            if left and right:
-                continue
-
-            if left:
-                crrn -= 1
-            if right:
-                crrn += 1
+            crrn -= left
+            crrn += right
 
             max_num = max(max_num, crrn)
 
