@@ -3,9 +3,8 @@ class Solution:
         bits = 0
 
         while n:
-            if n % 2:
-                bits += 1
             
+            bits += n % 2
             n //= 2
 
         return bits
